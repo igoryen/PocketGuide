@@ -64,10 +64,10 @@ public class MainActivity extends Activity {
 
             return true;
         case 0:
-        	DisplayToast("You clicked on Help");
+        	DisplayToast("Terminology: Android words\nWebsites: Android dev websites\nLearning log: words you have viewed");
         	return true;
         case 1:
-            DisplayToast("You clicked on About");
+            DisplayToast("Made by: Igor Entaltsev, CPAC");
             return true;      
         }
         return false;
