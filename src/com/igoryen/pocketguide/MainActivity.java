@@ -5,7 +5,7 @@ import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
+//import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -20,46 +20,34 @@ public class MainActivity extends Activity {
 		
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
+		
+		DisplayToast("In OnCreate()");
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		//getMenuInflater().inflate(R.menu.main, menu);
+		super.onCreateOptionsMenu(menu);
+		CreateMenu(menu);
 		return true;
 	}
 	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		return MenuChoice(item);
+	}
+	
 	private void CreateMenu(Menu menu){
-        MenuItem mnu1 = menu.add(0, 0, 0, "Item 1");
+        MenuItem help = menu.add(0, 0, 0, "Help");
         {         
-            mnu1.setIcon(R.drawable.ic_launcher);
-            mnu1.setShowAsAction(
-            	MenuItem.SHOW_AS_ACTION_IF_ROOM |
-                MenuItem.SHOW_AS_ACTION_WITH_TEXT);            
-        }
-        MenuItem mnu2 = menu.add(0, 1, 1, "Item 2");
-        {         
-            mnu2.setIcon(R.drawable.ic_launcher);            
-            mnu2.setShowAsAction(
+            help.setShowAsAction(
             	MenuItem.SHOW_AS_ACTION_IF_ROOM |
                 MenuItem.SHOW_AS_ACTION_WITH_TEXT);
         }
-        MenuItem mnu3 = menu.add(0, 2, 2, "Item 3");
-        {         
-            mnu3.setIcon(R.drawable.ic_launcher);
-            mnu3.setShowAsAction(
-            	MenuItem.SHOW_AS_ACTION_IF_ROOM |
-                MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-        }
-        MenuItem mnu4 = menu.add(0, 3, 3, "Item 4");
+        MenuItem about = menu.add(0, 1, 1, "About");
         {            
-            mnu4.setShowAsAction(
-            	MenuItem.SHOW_AS_ACTION_IF_ROOM |
-                MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-        }
-        MenuItem mnu5 = menu.add(0, 4, 4, "Item 5");
-        {            
-            mnu5.setShowAsAction(
+            about.setShowAsAction(
             	MenuItem.SHOW_AS_ACTION_IF_ROOM |
                 MenuItem.SHOW_AS_ACTION_WITH_TEXT);
         }
@@ -68,9 +56,7 @@ public class MainActivity extends Activity {
     private boolean MenuChoice(MenuItem item){        
         switch (item.getItemId()) {
         case  android.R.id.home:
-            Toast.makeText(this, 
-                "You clicked on the Application icon", 
-                Toast.LENGTH_LONG).show();
+        	DisplayToast("You clicked on the Application icon");
 
             Intent i = new Intent(this, MainActivity.class);
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -78,28 +64,18 @@ public class MainActivity extends Activity {
 
             return true;
         case 0:
-            Toast.makeText(this, "You clicked on Item 1", 
-                Toast.LENGTH_LONG).show();
-            return true;
+        	DisplayToast("You clicked on Help");
+        	return true;
         case 1:
-            Toast.makeText(this, "You clicked on Item 2", 
-                Toast.LENGTH_LONG).show();
-            return true;
-        case 2:
-            Toast.makeText(this, "You clicked on Item 3", 
-                Toast.LENGTH_LONG).show();
-            return true;
-        case 3:
-            Toast.makeText(this, "You clicked on Item 4", 
-                Toast.LENGTH_LONG).show();
-            return true;
-        case 4:
-            Toast.makeText(this, "You clicked on Item 5", 
-                Toast.LENGTH_LONG).show();
-            return true;        
+            DisplayToast("You clicked on About");
+            return true;      
         }
         return false;
     }   
-	
 
+    private void DisplayToast(String msg){
+    	Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+    }
+
+    
 }
