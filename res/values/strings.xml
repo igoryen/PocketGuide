@@ -3,6 +3,6 @@
 
     <string name="app_name">PocketGuide</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="simple_instruction">Welcome to igoryen\'s Pocket Guide! This is how you use it:</string>
 
 </resources>
