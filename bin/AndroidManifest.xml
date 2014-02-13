@@ -32,6 +32,14 @@
             </intent-filter>
         </activity>
         
+        <activity 
+            android:name=".ThirdActivity"
+            android:label="ThirdActivity">
+            <intent-filter >
+                <action android:name="com.igoryen.pocketguide.ThirdActivity" />
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
         
     </application>
 
