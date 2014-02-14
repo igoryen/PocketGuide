@@ -37,7 +37,8 @@ public class ThirdActivity extends ListActivity{// ListActivity! NOT Activity
 
 	public void onListItemClick(
 		ListView parent, View v, int position, long id){
-			Toast.makeText(this, "You have selected " + websites[position], Toast.LENGTH_SHORT).show();
+			String msg = "You have selected " + websites[position];
+			DisplayToast(msg);
 	 	}
 
 		    public void onClick(View view) {
@@ -49,7 +50,7 @@ public class ThirdActivity extends ListActivity{// ListActivity! NOT Activity
 		    			itemsSelected += lstView.getItemAtPosition(i) + "\n";
 		    		}
 		    	}
-		    	Toast.makeText(this, itemsSelected, Toast.LENGTH_LONG).show();
+		    	DisplayToast(itemsSelected);
 		    }
 
 	private void DisplayToast(String msg){
