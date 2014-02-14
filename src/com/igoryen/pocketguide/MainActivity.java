@@ -25,10 +25,18 @@ public class MainActivity extends Activity {
 		
 		
         Button bT = (Button) findViewById(R.id.term);
-        final Intent myIntent = new Intent("com.igoryen.pocketguide.SecondActivity");
+        final Intent i2 = new Intent("com.igoryen.pocketguide.SecondActivity");
         bT.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
-            	startActivity(myIntent);
+            	startActivity(i2);
+        	}
+    	});
+        
+        Button bW = (Button) findViewById(R.id.web);
+        final Intent i3 = new Intent("com.igoryen.pocketguide.ThirdActivity");
+        bW.setOnClickListener(new View.OnClickListener() {
+        	public void onClick(View v) {
+            	startActivity(i3);
         	}
     	});
 

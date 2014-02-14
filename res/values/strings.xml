@@ -18,5 +18,19 @@
         <item>Takeaways</item>
         <item>User Interactions</item>
     </string-array>  
+    
+    <array name="websites_array">
+        <item name="The official google android development website">www.developer.android.com</item>
+        <item name="Expert Android and Eclipse development knowledge">www.vogella.com</item>
+        <item name="A personal blog by Gabor Paller (Hungary)">www.mylifewithandroid.blogspot.ca</item>
+        <item name="Lots of Tutorials">www.technotalkative.com</item>
+        <item name="Another guy">www.thenewboston.org</item>
+        <item name="A professional training company focused on open source development">www.thenewcircle.com</item>
+        <item name="Dev support and more">www.shareasale.com</item>
+        <item name="Easy-to-follow video tutorials help you learn software, business, creative skills, and more.">www.lynda.com</item>
+        <item name="All things Android">www.androidtapp.com</item>
+        <item name="Discovering the Best Android Apps">www.androidzoom.com</item>
+        <item name="News about Android">www.androidandme.com</item>
+    </array>
 
 </resources>
