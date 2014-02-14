@@ -14,39 +14,47 @@ import android.widget.ListView;
 
 public class ThirdActivity extends ListActivity{// ListActivity! NOT Activity
 	
-/*
+	String[] websites;
+	
+
+	String[] terminology;
+
+
 	@Override
-    public void onCreate(Bundle savedInstanceState) {
+	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.thirdactivity);
 
-		final String[] websites = getResources().getStringArray(R.array.websites_array);
-		setListAdapter(new ArrayAdapter<String>(this, R.layout.thirdactivity, websites));
+		ListView lstView = (ListView)findViewById(android.R.id.list); 
+		lstView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);        
+        lstView.setTextFilterEnabled(true);
 
-		ListView lv = (ListView)findViewById(android.R.id.list); 
-		lv.setTextFilterEnabled(true);
-		
-		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_checked, websites);
+        websites = getResources().getStringArray(R.array.websites_array);
+        setListAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, websites));
 
-        // Assign adapter to ListView
-        lv.setAdapter(adapter);
-        lv.setVisibility(0);
+		DisplayToast("In ThirdActivity/OnCreate()");
+	}
 
+	public void onListItemClick(
+		ListView parent, View v, int position, long id){
+			Toast.makeText(this, "You have selected " + websites[position], Toast.LENGTH_SHORT).show();
+	 	}
 
+		    public void onClick(View view) {
+		    	ListView lstView = getListView();
 
-        lv.setOnClickListener(new OnItemClickListener() {
-            
-            public void onItemClick(AdapterView<?> parent, View view, int position,
-                    long id) {
+		    	String itemsSelected = "Selected items: \n";
+		    	for (int i=0; i<lstView.getCount(); i++) {
+		    		if (lstView.isItemChecked(i)) {
+		    			itemsSelected += lstView.getItemAtPosition(i) + "\n";
+		    		}
+		    	}
+		    	Toast.makeText(this, itemsSelected, Toast.LENGTH_LONG).show();
+		    }
 
-                String item = ((ListView)view).toString();
-
-                Toast.makeText(getBaseContext(), item, Toast.LENGTH_LONG).show();
-
-            }
-        });
-		
-	}*/
+	private void DisplayToast(String msg){
+    	Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+    }
 }
 		
       
