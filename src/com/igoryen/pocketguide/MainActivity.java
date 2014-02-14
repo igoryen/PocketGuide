@@ -24,19 +24,27 @@ public class MainActivity extends Activity {
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		
 		
-        Button bT = (Button) findViewById(R.id.term);
+        Button TermButton = (Button) findViewById(R.id.term);
         final Intent i2 = new Intent("com.igoryen.pocketguide.SecondActivity");
-        bT.setOnClickListener(new View.OnClickListener() {
+        TermButton.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
             	startActivity(i2);
         	}
     	});
         
-        Button bW = (Button) findViewById(R.id.web);
+        Button WebButton = (Button) findViewById(R.id.web);
         final Intent i3 = new Intent("com.igoryen.pocketguide.ThirdActivity");
-        bW.setOnClickListener(new View.OnClickListener() {
+        WebButton.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
             	startActivity(i3);
+        	}
+    	});
+
+        Button LogButton = (Button) findViewById(R.id.log);
+        //final Intent i3 = new Intent("com.igoryen.pocketguide.ThirdActivity");
+        LogButton.setOnClickListener(new View.OnClickListener() {
+        	public void onClick(View v) {
+        		DisplayToast("UNDER CONSTRUCTION");
         	}
     	});
 
