@@ -66,16 +66,16 @@ public class MainActivity extends Activity {
 	}
 	
 	private void CreateMenu(Menu menu){
-        MenuItem help = menu.add(0, 0, 0, "Help");
+        MenuItem help = menu.add(5, 5, 5, "Help");
         {         
             help.setShowAsAction(
-            	MenuItem.SHOW_AS_ACTION_IF_ROOM |
+            	MenuItem.SHOW_AS_ACTION_NEVER |
                 MenuItem.SHOW_AS_ACTION_WITH_TEXT);
         }
-        MenuItem about = menu.add(0, 1, 1, "About");
+        MenuItem about = menu.add(6, 6, 6, "About");
         {            
             about.setShowAsAction(
-            	MenuItem.SHOW_AS_ACTION_IF_ROOM |
+            	MenuItem.SHOW_AS_ACTION_NEVER |
                 MenuItem.SHOW_AS_ACTION_WITH_TEXT);
         }
     }
@@ -90,10 +90,10 @@ public class MainActivity extends Activity {
             startActivity(i);
 
             return true;
-        case 0:
+        case 5:
         	DisplayToast("Terminology: Android words\nWebsites: Android dev websites\nLearning log: words you have viewed");
         	return true;
-        case 1:
+        case 6:
             DisplayToast("Made by: Igor Entaltsev, CPAC");
             return true;      
         }
