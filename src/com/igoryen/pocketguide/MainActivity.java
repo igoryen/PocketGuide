@@ -8,7 +8,9 @@ import android.os.Bundle;
 //import android.app.Activity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
+import android.view.View;
 
 @SuppressLint("NewApi")
 public class MainActivity extends Activity {
@@ -21,7 +23,17 @@ public class MainActivity extends Activity {
 		ActionBar actionBar = getActionBar();
 		actionBar.setDisplayHomeAsUpEnabled(true);
 		
-		DisplayToast("In OnCreate()");
+		
+        Button bT = (Button) findViewById(R.id.term);
+        final Intent myIntent = new Intent("com.igoryen.pocketguide.SecondActivity");
+        bT.setOnClickListener(new View.OnClickListener() {
+        	public void onClick(View v) {
+            	startActivity(myIntent);
+        	}
+    	});
+
+		
+		DisplayToast("In MainActivity/OnCreate()");
 	}
 
 	@Override
@@ -77,5 +89,4 @@ public class MainActivity extends Activity {
     	Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
     }
 
-    
 }

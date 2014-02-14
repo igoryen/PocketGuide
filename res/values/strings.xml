@@ -4,5 +4,19 @@
     <string name="app_name">PocketGuide</string>
     <string name="action_settings">Settings</string>
     <string name="simple_instruction">Welcome to igoryen\'s Pocket Guide! Here\'s how you use it:</string>
+    <string-array name="terminology_array">
+        <item>adb</item>
+        <item>emulator</item>
+        <item>Android manifest file</item>
+        <item>layout xml file</item>
+        <item>toast</item>
+        <item>Activities</item>
+        <item>Layouts</item>
+        <item>Screen Size</item>
+        <item>Fragments</item>
+        <item>Intents</item>
+        <item>Takeaways</item>
+        <item>User Interactions</item>
+    </string-array>  
 
 </resources>

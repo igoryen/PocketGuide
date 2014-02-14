@@ -16,31 +16,30 @@
         android:text="@string/simple_instruction" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/term"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_alignRight="@+id/textView1"
         android:layout_below="@+id/textView1"
-        android:layout_marginTop="14dp"
         android:text="Terminology" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/web"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button1"
-        android:layout_alignRight="@+id/button1"
-        android:layout_below="@+id/button1"
+        android:layout_alignLeft="@+id/term"
+        android:layout_alignRight="@+id/term"
+        android:layout_below="@+id/term"
         android:text="Websites" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/log"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/button2"
-        android:layout_alignRight="@+id/button2"
-        android:layout_below="@+id/button2"
-        android:text="Learning Logs" />
+        android:layout_alignLeft="@+id/web"
+        android:layout_alignRight="@+id/web"
+        android:layout_below="@+id/web"
+        android:text="Learning Log" />
 
 </RelativeLayout>
