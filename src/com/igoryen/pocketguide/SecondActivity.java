@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.app.ListActivity;
 //import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -12,10 +13,10 @@ import android.widget.AutoCompleteTextView;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ListView;
-import android.widget.AdapterView.OnItemClickListener;;
+import android.widget.AdapterView.OnItemClickListener;
 
 
-public class SecondActivity extends ListActivity{
+public class SecondActivity extends Activity{ // change to "ListActivity" to use with ListView
 	
 	String[] terminology;
 
@@ -50,7 +51,7 @@ public class SecondActivity extends ListActivity{
 		 */
         textView.setThreshold(3);
         textView.setAdapter(adapter);
-
+		Log.d("Log", "Second: Second activity is loaded");
 	}
 	
 	private void DisplayToast(String msg){
