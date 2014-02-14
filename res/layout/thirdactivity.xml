@@ -8,7 +8,7 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Simple instruction followed by a ListView of URL links"
+        android:text="@string/act3_instr"
         android:textAppearance="?android:attr/textAppearanceSmall" />
     
     <ListView 

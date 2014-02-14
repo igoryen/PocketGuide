@@ -9,7 +9,7 @@
         android:id="@+id/textView1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Simple instruction followed by an AutoCompleteText View"
+        android:text="@string/act2_instr"
         android:textAppearance="?android:attr/textAppearanceSmall" />
     
     <AutoCompleteTextView 

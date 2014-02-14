@@ -41,7 +41,6 @@ public class MainActivity extends Activity {
     	});
 
         Button LogButton = (Button) findViewById(R.id.log);
-        //final Intent i3 = new Intent("com.igoryen.pocketguide.ThirdActivity");
         LogButton.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
         		DisplayToast("UNDER CONSTRUCTION");
@@ -49,7 +48,7 @@ public class MainActivity extends Activity {
     	});
 
 		
-		DisplayToast("In MainActivity/OnCreate()");
+		//DisplayToast("In MainActivity/OnCreate()");
 	}
 
 	@Override
